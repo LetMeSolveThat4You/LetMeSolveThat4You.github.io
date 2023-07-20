@@ -1,0 +1,47 @@
+[
+    {
+      "image": "path/to/image1.jpg",
+      "question": "Welke Griekse god/godin is de heerser van de onderwereld?",
+      "answers": {
+        "A": "Ares",
+        "B": "Hades",
+        "C": "Hermes",
+        "D": "Aphrodite"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "image": "path/to/image2.jpg",
+      "question": "Wie is de schepper van de Noorse mythologie?",
+      "answers": {
+        "A": "Odin",
+        "B": "Thor",
+        "C": "Loki",
+        "D": "Yggdrasil"
+      },
+      "correctAnswer": "A"
+    },
+    {
+      "image": "path/to/image3.jpg",
+      "question": "Welke Egyptische god/godin is verbonden met de zon?",
+      "answers": {
+        "A": "Anubis",
+        "B": "Ra",
+        "C": "Isis",
+        "D": "Osiris"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "image": "path/to/image4.jpg",
+      "question": "Wie is de hindoeïstische god van vernietiging en transformatie?",
+      "answers": {
+        "A": "Vishnu",
+        "B": "Shiva",
+        "C": "Brahma",
+        "D": "Indra"
+      },
+      "correctAnswer": "B"
+    }
+  ]
+  
