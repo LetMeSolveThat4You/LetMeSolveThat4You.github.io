@@ -90,7 +90,7 @@
     let score = 0;
     let canAnswer = true;
     let quizData = [];
-    
+
     const scoreElement = document.getElementById('score');
     const questionImageElement = document.getElementById('question-image');
     const questionElement = document.getElementById('question');
@@ -137,15 +137,15 @@
 
       setTimeout(() => {
         hideAnswerInfo();
-
-        if (currentQuestionIndex < quizData.length - 1) {
-          currentQuestionIndex++;
-          displayQuestion(currentQuestionIndex);
-          canAnswer = true;
-        } else {
-          alert(`Quiz Finished! Your final score is ${score}`);
-        }
       }, 3000);
+
+      if (currentQuestionIndex < quizData.length - 1) {
+        currentQuestionIndex++;
+        displayQuestion(currentQuestionIndex);
+        canAnswer = true;
+      } else {
+        alert(`Quiz Finished! Your final score is ${score}`);
+      }
     }
 
     function resetQuiz() {
