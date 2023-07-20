@@ -6,6 +6,7 @@
   <style>
     body {
       font-family: Arial, sans-serif;
+      position: relative;
     }
 
     #quiz-container {
@@ -13,7 +14,15 @@
       margin: 0 auto;
       padding: 20px;
     }
-
+    
+    #question-image-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 200px; /* Set a fixed height for the image container */
+      overflow: hidden; /* Hide any overflow of the image */
+    }
+    
     #question-image {
       max-width: 100%;
       height: auto;
@@ -55,7 +64,9 @@
   <div id="quiz-container">
     <div id="score">Score: 0</div>
     <button id="reset-btn" onclick="resetQuiz()">Reset</button>
-    <img id="question-image" src="" alt="Question Image">
+    <div id="question-image-container">
+      <img id="question-image" src="" alt="Question Image">
+    </div>
     <div id="question">Question goes here.</div>
     <button class="answer-btn" onclick="checkAnswer('A')">A. Answer A</button>
     <button class="answer-btn" onclick="checkAnswer('B')">B. Answer B</button>
