@@ -89,7 +89,8 @@
     let currentQuestionIndex = 0;
     let score = 0;
     let canAnswer = true;
-
+    let quizData = [];
+    
     const scoreElement = document.getElementById('score');
     const questionImageElement = document.getElementById('question-image');
     const questionElement = document.getElementById('question');
@@ -155,7 +156,6 @@
     }
 
     async function initializeQuiz() {
-      let quizData = [];
       quizData = await fetchQuizData();
       if (quizData.length > 0) {
         shuffleArray(quizData); // Shuffle the quiz data
