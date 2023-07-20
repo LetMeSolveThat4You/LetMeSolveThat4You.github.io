@@ -76,7 +76,6 @@
       #quiz-container {
         padding: 10px;
       }
-
       .answer-btn-container {
         grid-template-columns: 1fr;
       }
@@ -85,24 +84,28 @@
       @media screen and (orientation: landscape) {
         #quiz-container {
           flex-direction: row;
-          /* Display elements side by side */
         }
-
         #question-image-container {
           width: 50%;
-          /* Half of the screen width for the image */
           height: auto;
         }
-
+        #question-image {
+          width: auto;
+          height: 100%;
+        }
         #question {
           flex: 1;
-          /* Take remaining width for the question and answers */
           padding: 10px;
         }
-
         .answer-btn-container {
           grid-template-columns: 1fr 1fr;
-          /* Back to 2 columns for answers */
+          align-items: flex-start;
+        }
+        .answer-info {
+          position: static;
+          margin-top: 10px;
+          padding: 10px;
+          width: 100%;
         }
       }
     }
