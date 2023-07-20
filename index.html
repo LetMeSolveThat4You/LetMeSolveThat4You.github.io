@@ -51,6 +51,12 @@
       cursor: pointer;
     }
 
+    .answer-btn-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    
     .answer-info {
       display: none;
       margin-top: 10px;
@@ -68,10 +74,12 @@
       <img id="question-image" src="" alt="Question Image">
     </div>
     <div id="question">Question goes here.</div>
-    <button class="answer-btn" onclick="checkAnswer('A')">A. Answer A</button>
-    <button class="answer-btn" onclick="checkAnswer('B')">B. Answer B</button>
-    <button class="answer-btn" onclick="checkAnswer('C')">C. Answer C</button>
-    <button class="answer-btn" onclick="checkAnswer('D')">D. Answer D</button>
+    <div class="answer-btn-container">
+      <button class="answer-btn" onclick="checkAnswer('A')">A. Answer A</button>
+      <button class="answer-btn" onclick="checkAnswer('B')">B. Answer B</button>
+      <button class="answer-btn" onclick="checkAnswer('C')">C. Answer C</button>
+      <button class="answer-btn" onclick="checkAnswer('D')">D. Answer D</button>
+    </div>
   </div>
   <div class="answer-info" id="answer-info"></div>
 
