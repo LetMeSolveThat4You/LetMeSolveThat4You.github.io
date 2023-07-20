@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Mythology Quiz</title>
   <style>
     body {
       font-family: Arial, sans-serif;
     }
+
     #quiz-container {
       max-width: 600px;
       margin: 0 auto;
       padding: 20px;
     }
+
     #question-image {
       max-width: 100%;
       height: auto;
     }
+
     .answer-btn {
       display: block;
       margin: 10px 0;
@@ -24,6 +28,7 @@
       background-color: #f1f1f1;
       cursor: pointer;
     }
+
     .answer-info {
       display: none;
       margin-top: 10px;
@@ -32,6 +37,7 @@
     }
   </style>
 </head>
+
 <body>
   <div id="quiz-container">
     <div id="score">Score: 0</div>
@@ -70,8 +76,8 @@
       answerInfoElement.textContent = '';
       answerInfoElement.style.display = 'none';
     }
-    
-function shuffleArray(array) {
+
+    function shuffleArray(array) {
       for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [array[i], array[j]] = [array[j], array[i]];
@@ -83,13 +89,13 @@ function shuffleArray(array) {
     let score = 0;
     let quizData = [];
     let canAnswer = true;
-    
+
     const scoreElement = document.getElementById('score');
     const questionImageElement = document.getElementById('question-image');
     const questionElement = document.getElementById('question');
     const answerButtons = document.querySelectorAll('.answer-btn');
 
-    
+
 
     function displayQuestion(index) {
       const currentQuestion = quizData[index];
@@ -105,9 +111,9 @@ function shuffleArray(array) {
       });
     }
 
-       
 
-    function checkAnswer(selectedAnswer) {
+
+    async function checkAnswer(selectedAnswer) {
       if (!canAnswer) return;
 
       const currentQuestion = quizData[currentQuestionIndex];
@@ -152,9 +158,6 @@ function shuffleArray(array) {
       displayQuestion(currentQuestionIndex);
     }
 
-    // Initial quiz display
-    
-    
     async function initializeQuiz() {
       quizData = await fetchQuizData();
       if (quizData.length > 0) {
@@ -165,11 +168,9 @@ function shuffleArray(array) {
       }
     }
 
-
-
-  // Willekeurig schudden van de quizData-array voorafgaand aan het tonen van de vragen
-  window.onload = initializeQuiz;
+    window.onload = initializeQuiz;
 
   </script>
 </body>
+
 </html>
