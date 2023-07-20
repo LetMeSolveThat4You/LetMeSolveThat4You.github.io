@@ -74,42 +74,50 @@
       cursor: pointer;
     }
 
-    /* Responsive design */
-    @media screen and (max-width: 600px) {
-      #quiz-container {
-        padding: 10px;
-      }
-      .answer-btn-container {
-        grid-template-columns: 1fr;
+    @media screen and (orientation: portrait) {
+      #question-image {
+        order: 1;
       }
 
-      /* Landscape orientation */
-      @media screen and (orientation: landscape) {
-        #quiz-container {
-          flex-direction: row;
-        }
-        #question-image-container {
-          width: 50%;
-          height: auto;
-        }
-        #question-image {
-          width: auto;
-          height: 100%;
-        }
-        #question {
-          flex: 1;
-          padding: 10px;
-        }
-        .answer-btn-container {
-          grid-template-columns: 1fr 1fr;
-          align-items: flex-start;
-        }
-        .answer-info {
-          position: static;
-          margin-top: 10px;
-          padding: 10px;
-          width: 100%;
-        }
+      #question {
+        order: 2;
+      }
+
+      .answer-btn {
+        order: 3;
+      }
+
+      #answer-info {
+        order: 4;
+      }
+    }
+
+    @media screen and (orientation: landscape) {
+      #quiz-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+      }
+
+      #question-image {
+        max-width: 50%;
+        order: 1;
+      }
+
+      #question {
+        max-width: 50%;
+        order: 2;
+        padding: 0 20px;
+      }
+
+      .answer-btn {
+        order: 3;
+        max-width: 50%;
+      }
+
+      #answer-info {
+        order: 4;
+        max-width: 50%;
       }
     }
   </style>
