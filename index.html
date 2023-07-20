@@ -7,30 +7,55 @@
     body {
       font-family: Arial, sans-serif;
       position: relative;
-      height: 100%; /* Set the body height to 100% */
-      margin: 0; /* Remove default margin */
+      height: 100%;
+      margin: 0;
       display: flex;
-      flex-direction: column; /* Stack elements vertically */
+      flex-direction: column;
     }
 
     #quiz-container {
       max-width: 600px;
       margin: 0 auto;
       padding: 20px;
-      flex: 1; /* Let the quiz container take remaining vertical space */
+      flex: 1;
       display: flex;
-      flex-direction: column; /* Stack elements vertically */
+      flex-direction: column;
       justify-content: flex-start;
     }
-    
+
     #question-image-container {
-      height: 50%; /* Set the height of image container to 50% */
-      overflow: hidden; /* Hide any overflow of the image */
+      height: 50%;
+      overflow: hidden;
     }
-    
+
     #question-image {
-      max-width: 100%;
+      width: 100%;
       height: auto;
+    }
+
+    .answer-btn-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .answer-btn {
+      display: block;
+      padding: 10px;
+      width: 100%;
+      text-align: left;
+      background-color: #f1f1f1;
+      cursor: pointer;
+    }
+
+    .answer-info {
+      display: none;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 10px;
+      background-color: #f1f1f1;
     }
 
     #score {
@@ -45,31 +70,41 @@
       right: 10px;
       cursor: pointer;
     }
-    
-    .answer-btn {
-      display: block;
-      margin: 10px 0;
-      padding: 10px;
-      width: 100%;
-      text-align: left;
-      background-color: #f1f1f1;
-      cursor: pointer;
-    }
 
-    .answer-btn-container {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 5px;
-    }
-    
-    .answer-info {
-      display: none;
-      position: absolute;
-      bottom: 0; /* Place the answer-info at the bottom */
-      left: 0;
-      width: 100%;
-      padding: 10px;
-      background-color: #f1f1f1;
+    /* Responsive design */
+    @media screen and (max-width: 600px) {
+      #quiz-container {
+        padding: 10px;
+      }
+
+      .answer-btn-container {
+        grid-template-columns: 1fr;
+      }
+
+      /* Landscape orientation */
+      @media screen and (orientation: landscape) {
+        #quiz-container {
+          flex-direction: row;
+          /* Display elements side by side */
+        }
+
+        #question-image-container {
+          width: 50%;
+          /* Half of the screen width for the image */
+          height: auto;
+        }
+
+        #question {
+          flex: 1;
+          /* Take remaining width for the question and answers */
+          padding: 10px;
+        }
+
+        .answer-btn-container {
+          grid-template-columns: 1fr 1fr;
+          /* Back to 2 columns for answers */
+        }
+      }
     }
   </style>
 </head>
@@ -175,7 +210,7 @@
 
       setTimeout(() => {
         hideAnswerInfo();
-      }, 3000);      
+      }, 3000);
 
       if (currentQuestionIndex < quizData.length - 1) {
         currentQuestionIndex++;
