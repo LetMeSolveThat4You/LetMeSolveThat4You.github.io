@@ -115,7 +115,7 @@
 
       const currentQuestion = quizData[currentQuestionIndex];
       canAnswer = false;
-
+      displayAnswerInfo(selectedAnswer);
       if (selectedAnswer === currentQuestion.correctAnswer) {
         score++;
         scoreElement.textContent = `Score: ${score}`;
@@ -133,11 +133,9 @@
         return;
       }
 
-      displayAnswerInfo(selectedAnswer);
-
       setTimeout(() => {
         hideAnswerInfo();
-      }, 3000);
+      }, 3000);      
 
       if (currentQuestionIndex < quizData.length - 1) {
         currentQuestionIndex++;
@@ -146,6 +144,7 @@
       } else {
         alert(`Quiz Finished! Your final score is ${score}`);
       }
+
     }
 
     function resetQuiz() {
