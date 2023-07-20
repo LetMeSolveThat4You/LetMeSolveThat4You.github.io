@@ -49,6 +49,7 @@
     <button class="answer-btn" onclick="checkAnswer('D')">D. Answer D</button>
     <button onclick="resetQuiz()">Reset</button>
   </div>
+  <div class="answer-info" id="answer-info"></div>
 
   <script>
     // Quiz data with questions, answers, and correct answer letter
@@ -87,15 +88,12 @@
 
     let currentQuestionIndex = 0;
     let score = 0;
-    let quizData = [];
     let canAnswer = true;
 
     const scoreElement = document.getElementById('score');
     const questionImageElement = document.getElementById('question-image');
     const questionElement = document.getElementById('question');
     const answerButtons = document.querySelectorAll('.answer-btn');
-
-
 
     function displayQuestion(index) {
       const currentQuestion = quizData[index];
@@ -110,8 +108,6 @@
         });
       });
     }
-
-
 
     async function checkAnswer(selectedAnswer) {
       if (!canAnswer) return;
