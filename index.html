@@ -7,19 +7,24 @@
     body {
       font-family: Arial, sans-serif;
       position: relative;
+      height: 100%; /* Set the body height to 100% */
+      margin: 0; /* Remove default margin */
+      display: flex;
+      flex-direction: column; /* Stack elements vertically */
     }
 
     #quiz-container {
-      max-width: 450px;
+      max-width: 600px;
       margin: 0 auto;
       padding: 20px;
+      flex: 1; /* Let the quiz container take remaining vertical space */
+      display: flex;
+      flex-direction: column; /* Stack elements vertically */
+      justify-content: flex-start;
     }
     
     #question-image-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 600px; /* Set a fixed height for the image container */
+      height: 50%; /* Set the height of image container to 50% */
       overflow: hidden; /* Hide any overflow of the image */
     }
     
@@ -54,12 +59,15 @@
     .answer-btn-container {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 10px;
+      gap: 5px;
     }
     
     .answer-info {
       display: none;
-      margin-top: 10px;
+      position: absolute;
+      bottom: 0; /* Place the answer-info at the bottom */
+      left: 0;
+      width: 100%;
       padding: 10px;
       background-color: #f1f1f1;
     }
@@ -80,8 +88,8 @@
       <button class="answer-btn" onclick="checkAnswer('C')">C. Answer C</button>
       <button class="answer-btn" onclick="checkAnswer('D')">D. Answer D</button>
     </div>
+    <div class="answer-info" id="answer-info"></div>
   </div>
-  <div class="answer-info" id="answer-info"></div>
 
   <script>
     // Quiz data with questions, answers, and correct answer letter
