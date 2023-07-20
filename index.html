@@ -24,6 +24,12 @@
       background-color: #f1f1f1;
       cursor: pointer;
     }
+    .answer-info {
+      display: none;
+      margin-top: 10px;
+      padding: 10px;
+      background-color: #f1f1f1;
+    }
   </style>
 </head>
 <body>
@@ -51,6 +57,20 @@
       }
     }
 
+    function displayAnswerInfo(selectedAnswer) {
+      const currentQuestion = quizData[currentQuestionIndex];
+      const answerInfo = currentQuestion.answersInfo[selectedAnswer];
+      const answerInfoElement = document.getElementById('answer-info');
+      answerInfoElement.textContent = answerInfo;
+      answerInfoElement.style.display = 'block';
+    }
+
+    function hideAnswerInfo() {
+      const answerInfoElement = document.getElementById('answer-info');
+      answerInfoElement.textContent = '';
+      answerInfoElement.style.display = 'none';
+    }
+    
 function shuffleArray(array) {
       for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -88,37 +108,41 @@ function shuffleArray(array) {
        
 
     function checkAnswer(selectedAnswer) {
-      if (!canAnswer) return; // Als het niet toegestaan is om te antwoorden, doe niets
+      if (!canAnswer) return;
 
       const currentQuestion = quizData[currentQuestionIndex];
-      canAnswer = false; // Schakel het beantwoorden uit totdat de volgende vraag wordt weergegeven
+      canAnswer = false;
 
       if (selectedAnswer === currentQuestion.correctAnswer) {
         score++;
         scoreElement.textContent = `Score: ${score}`;
-        document.body.style.backgroundColor = '#2ecc71'; // Groene achtergrond voor juist antwoord
+        document.body.style.backgroundColor = '#2ecc71';
         setTimeout(() => {
-          document.body.style.backgroundColor = '#ffffff'; // Herstel achtergrondkleur na 1 seconde
-          canAnswer = true; // Sta toe om opnieuw te antwoorden na 1 seconde
+          document.body.style.backgroundColor = '#ffffff';
+          canAnswer = true;
         }, 1000);
       } else {
-        document.body.style.backgroundColor = '#e74c3c'; // Rode achtergrond voor fout antwoord
+        document.body.style.backgroundColor = '#e74c3c';
         setTimeout(() => {
-          document.body.style.backgroundColor = '#ffffff'; // Herstel achtergrondkleur na 1 seconde
-          canAnswer = true; // Sta toe om opnieuw te antwoorden na 1 seconde
+          document.body.style.backgroundColor = '#ffffff';
+          canAnswer = true;
         }, 1000);
-        return; // Geen score verhogen bij een fout antwoord
+        return;
       }
 
+      displayAnswerInfo(selectedAnswer);
+
       setTimeout(() => {
+        hideAnswerInfo();
+
         if (currentQuestionIndex < quizData.length - 1) {
           currentQuestionIndex++;
           displayQuestion(currentQuestionIndex);
-          canAnswer = true; // Sta toe om te antwoorden bij de volgende vraag
+          canAnswer = true;
         } else {
           alert(`Quiz Finished! Your final score is ${score}`);
         }
-      }, 1000);
+      }, 3000);
     }
 
     function resetQuiz() {
