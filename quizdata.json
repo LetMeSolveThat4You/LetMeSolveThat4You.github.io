@@ -1,6 +1,6 @@
 [
   {
-    "image": "path/to/image1.jpg",
+    "image": "images/image1.jpg",
     "question": "Welke Griekse god/godin is de heerser van de onderwereld?",
     "answers": {
       "A": "Ares",
@@ -17,7 +17,7 @@
     }
   },
   {
-    "image": "path/to/image2.jpg",
+    "image": "images/image2.jpg",
     "question": "Wie is de schepper van de Noorse mythologie?",
     "answers": {
       "A": "Odin",
@@ -34,7 +34,7 @@
     }
   },
   {
-    "image": "path/to/image3.jpg",
+    "image": "images/image3.jpg",
     "question": "Welke Egyptische god/godin is verbonden met de zon?",
     "answers": {
       "A": "Anubis",
@@ -51,7 +51,7 @@
     }
   },
   {
-    "image": "path/to/image4.jpg",
+    "image": "images/image4.jpg",
     "question": "Wie is de hindoeïstische god van vernietiging en transformatie?",
     "answers": {
       "A": "Vishnu",
