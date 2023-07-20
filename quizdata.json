@@ -1,70 +1,70 @@
 [
-    {
-        "image": "path/to/image1.jpg",
-        "question": "Welke Griekse god/godin is de heerser van de onderwereld?",
-        "answers": {
-            "A": "Ares",
-            "B": "Hades",
-            "C": "Hermes",
-            "D": "Aphrodite"
-        },
-        "correctAnswer": "B",
-        "answersInfo": {
-            "A": "Ares is de Griekse god van oorlog.",
-            "B": "Hades is inderdaad de heerser van de onderwereld.",
-            "C": "Hermes is de god van handel, dieven en boodschappers.",
-            "D": "Aphrodite is de Griekse godin van liefde en schoonheid."
-        }
+  {
+    "image": "path/to/image1.jpg",
+    "question": "Welke Griekse god/godin is de heerser van de onderwereld?",
+    "answers": {
+      "A": "Ares",
+      "B": "Hades",
+      "C": "Hermes",
+      "D": "Aphrodite"
     },
-    {
-        "image": "path/to/image2.jpg",
-        "question": "Wie is de schepper van de Noorse mythologie?",
-        "answers": {
-            "A": "Odin",
-            "B": "Thor",
-            "C": "Loki",
-            "D": "Yggdrasil"
-        },
-        "correctAnswer": "A",
-        "answersInfo": {
-            "A": "Odin is de oppergod en schepper in de Noorse mythologie.",
-            "B": "Thor is de god van de donder en bliksem.",
-            "C": "Loki is een listige god in de Noorse mythologie.",
-            "D": "Yggdrasil is de heilige boom die de negen werelden verbindt."
-        }
-    },
-    {
-        "image": "path/to/image3.jpg",
-        "question": "Welke Egyptische god/godin is verbonden met de zon?",
-        "answers": {
-            "A": "Anubis",
-            "B": "Ra",
-            "C": "Isis",
-            "D": "Osiris"
-        },
-        "correctAnswer": "B",
-        "answersInfo": {
-            "A": "Anubis is de Egyptische god van mummificatie en de dood.",
-            "B": "Ra is inderdaad de belangrijkste Egyptische god van de zon.",
-            "C": "Isis is de godin van magie, moederschap en vruchtbaarheid.",
-            "D": "Osiris is de Egyptische god van de dood, wedergeboorte en landbouw."
-        }
-    },
-    {
-        "image": "path/to/image4.jpg",
-        "question": "Wie is de hindoeïstische god van vernietiging en transformatie?",
-        "answers": {
-            "A": "Vishnu",
-            "B": "Shiva",
-            "C": "Brahma",
-            "D": "Indra"
-        },
-        "correctAnswer": "B",
-        "answersInfo": {
-            "A": "Vishnu is de hindoeïstische god van behoud en bescherming.",
-            "B": "Shiva is inderdaad de hindoeïstische god van vernietiging en transformatie.",
-            "C": "Brahma is de hindoeïstische god van schepping.",
-            "D": "Indra is de koning van de hindoeïstische goden en heerser van de lucht."
-        }
+    "correctAnswer": "B",
+    "answersInfo": {
+      "A": "Ares is de Griekse god van oorlog.",
+      "B": "Hades is de heerser van de onderwereld.",
+      "C": "Hermes is de god van handel en boodschappers.",
+      "D": "Aphrodite is de godin van liefde en schoonheid."
     }
+  },
+  {
+    "image": "path/to/image2.jpg",
+    "question": "Wie is de schepper van de Noorse mythologie?",
+    "answers": {
+      "A": "Odin",
+      "B": "Thor",
+      "C": "Loki",
+      "D": "Yggdrasil"
+    },
+    "correctAnswer": "A",
+    "answersInfo": {
+      "A": "Odin is de oppergod en schepper van de Noorse mythologie.",
+      "B": "Thor is de god van donder en bliksem.",
+      "C": "Loki is een sluwe god en een trickster.",
+      "D": "Yggdrasil is de levensboom die de negen werelden verbindt."
+    }
+  },
+  {
+    "image": "path/to/image3.jpg",
+    "question": "Welke Egyptische god/godin is verbonden met de zon?",
+    "answers": {
+      "A": "Anubis",
+      "B": "Ra",
+      "C": "Isis",
+      "D": "Osiris"
+    },
+    "correctAnswer": "B",
+    "answersInfo": {
+      "A": "Anubis is de god van mummificatie en begrafenisrituelen.",
+      "B": "Ra is de zonnegod van de Egyptische mythologie.",
+      "C": "Isis is de godin van vruchtbaarheid en magie.",
+      "D": "Osiris is de god van de dood en wedergeboorte."
+    }
+  },
+  {
+    "image": "path/to/image4.jpg",
+    "question": "Wie is de hindoeïstische god van vernietiging en transformatie?",
+    "answers": {
+      "A": "Vishnu",
+      "B": "Shiva",
+      "C": "Brahma",
+      "D": "Indra"
+    },
+    "correctAnswer": "B",
+    "answersInfo": {
+      "A": "Vishnu is de behouder en beschermer van het universum.",
+      "B": "Shiva is de god van vernietiging en transformatie.",
+      "C": "Brahma is de schepper van het universum.",
+      "D": "Indra is de koning van de goden en heer van de hemel."
+    }
+  }
 ]
